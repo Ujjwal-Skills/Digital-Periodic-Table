@@ -16,13 +16,17 @@ def main_menu():
         print("9. 🚪 Exit")
         print("="*45)
 
-        choice = int(input("Enter your choice (1-9): ")) #taking input from user
+        try:
+            choice = int(input("Enter your choice (1-9): ")) #taking input from user
+        except ValueError:
+            print("❌ Invalid choice. Enter a number from 1 to 9.")
+            continue
         print("") #too print empty line
 
         #handling the choices made by player
         if choice == 1:
             #print("\nView Periodic Table feature coming soon.")
-            show_collection()
+            show_collection(elements)
 
         elif choice == 2:
             #print("\nsearch element feature coming soon.")
@@ -488,7 +492,7 @@ def show_actinides (elements):
     row_layout(row)
 
 #defining function to display my elements in proper layout
-def show_collection():
+def show_collection(elements):
     print("="*110)
     print("|"," "*37,"🧪", " DIGITAL PERIODIC TABLE ","🧪"," "*37,"|")
     print("="*110,"\n")
@@ -501,6 +505,6 @@ def show_collection():
     show_period_7(elements)
     show_lanthanides(elements)
     show_actinides(elements)
-#show_collection()
+#show_collection(elements)
 
 main_menu()
