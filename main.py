@@ -1,6 +1,7 @@
+import random
+
 # defining the function for the main menu
 def main_menu():
-    #seed = 53
     while True: #Return to the menu until player chooses to exit
         #displaying main menu
         print("\n+=================== MAIN MENU ===================+\n")
@@ -38,7 +39,8 @@ def main_menu():
             discovery_timeline(elements)
 
         elif choice == 6:
-            print("\nQuiz Challenge feature coming soon.")
+            #print("\nQuiz Challenge feature coming soon.")
+            quiz(elements)
 
         elif choice == 7:
             print("\nHighest Scores feature coming soon.")
@@ -278,5 +280,30 @@ def discovery_timeline(elements):
             if choice == 4:   
                 if 2000 <= year :
                     print(atomic_number,"   ",elements[atomic_number]["year"],"   ",elements[atomic_number]["name"])
-
 #discovery_timeline(elements)
+
+#defining the function for quiz
+def quiz(elements):
+    score = 0 #Initializing the score
+
+    for question in range(1,6):
+        number = random.randint(1, 118)
+        element = elements[number]
+
+        #question 1: What is the symbol of element
+        print("\nQuestion",question)
+        print("What is the symbol of",element["name"],"?")
+        answer = input("Answer: ").strip().lower()
+
+        if answer == element["symbol"].lower():
+            print("✅ Correct!")
+            score += 1
+        else:
+            print("❌ Wrong!")
+            print("Correct answer:",element["symbol"])
+
+    #quiz finish and calculating the score        
+    print("\nQuiz Finished!")
+    print("Your score:",score,"/5")
+    
+#quiz(elements) 
