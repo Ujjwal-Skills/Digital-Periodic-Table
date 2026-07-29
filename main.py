@@ -43,7 +43,8 @@ def main_menu():
             quiz(elements)
 
         elif choice == 7:
-            print("\nHighest Scores feature coming soon.")
+            #print("\nHighest Scores feature coming soon.")
+            highest_scores()
 
         elif choice == 8:
             print("\nAbout feature coming soon.")
@@ -305,5 +306,21 @@ def quiz(elements):
     #quiz finish and calculating the score        
     print("\nQuiz Finished!")
     print("Your score:",score,"/5")
+
+    #storing user score
+    name = input("Enter  your name: ")
     
-#quiz(elements) 
+    file = open("scores.txt","a")
+    file.write(name +"|"+ str(score)+"\n")
+    file.close()
+#quiz(elements)
+
+def highest_scores():
+    file = open("scores.txt","r")
+
+    for line in file:
+        data = line.strip().split("|")
+        print(data[0], "-", data[1])
+
+    file.close()
+#highest_scores()
