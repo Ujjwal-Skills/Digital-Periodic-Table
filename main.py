@@ -299,13 +299,14 @@ def categories(elements):
 def discovery_timeline(elements):
 
     #displaying the discovery timeline menu
-    print("+"+"="*40+"+")
+    print("+" + "="*40 + "+")
     print("|           DISCOVERY TIMELINE           |")
-    print("+"+"="*40+"+")
-    print("|","1. Ancient Elements"," "*18,"|")
-    print("2. 1800-1899")
-    print("3. 1900-1999")
-    print("4. 2300 onwards")
+    print("+" + "="*40 + "+")
+    print(f"{'| '}{'1. Ancient Elements':<39}{'|'}")
+    print(f"{'| '}{'2. 1800-1899':<39}{'|'}")
+    print(f"{'| '}{'3. 1900-1999':<39}{'|'}")
+    print(f"{'| '}{'4. 2300 onwards':<39}{'|'}")
+    print("+" + "="*40 + "+\n")
 
     #taking input from user
     try:
@@ -315,8 +316,9 @@ def discovery_timeline(elements):
             print("Please select between 1 and 4.")
 
         #displaying discovery timeline table
-        print("Atomic No.\tYear\tName")
-        print("-"*30)
+        print("\n+" + "="*50 + "+")
+        print(f"{'| '}{'Atomic No.':<15}{'Year':<12}{'Name':<22}{'|'}")
+        print("+" + "-"*50 + "+")
 
         for atomic_number in elements: #looping through all element
             year = elements[atomic_number]["year"]
@@ -324,21 +326,22 @@ def discovery_timeline(elements):
             #handling choice
             if year == "Ancient":
                 if choice == 1:
-                    print(atomic_number,"   ",elements[atomic_number]["year"],"   ",elements[atomic_number]["name"])
+                    print(f"{'| '}{atomic_number:<15}{elements[atomic_number]['year']:<12}{elements[atomic_number]['name']:<22}{'|'}")
 
             if year != "Ancient":
                 year = int(year)
                 if choice == 2: 
                     if 1800 <= year <=1899:
-                        print(atomic_number,"   ",elements[atomic_number]["year"],"   ",elements[atomic_number]["name"])
+                        print(f"{'| '}{atomic_number:<15}{elements[atomic_number]['year']:<12}{elements[atomic_number]['name']:<22}{'|'}")
 
                 if choice == 3:  
                     if 1900 <= year <=1999:
-                        print(atomic_number,"   ",elements[atomic_number]["year"],"   ",elements[atomic_number]["name"])
+                        print(f"{'| '}{atomic_number:<15}{elements[atomic_number]['year']:<12}{elements[atomic_number]['name']:<22}{'|'}")
 
                 if choice == 4:   
                     if 2300 <= year :
-                        print(atomic_number,"   ",elements[atomic_number]["year"],"   ",elements[atomic_number]["name"])
+                        print(f"{'| '}{atomic_number:<15}{elements[atomic_number]['year']:<12}{elements[atomic_number]['name']:<22}{'|'}")
+        print("+" + "-"*50 + "+")
 
     except ValueError:
         print("❌ Invalid choice. Enter a number from 1 to 4.")
