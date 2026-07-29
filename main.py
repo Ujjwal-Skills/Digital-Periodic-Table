@@ -16,7 +16,8 @@ def main_menu():
         print("9. 🚪 Exit")
         print("="*45)
 
-        choice = int(input("Enter your choice (1-7): ")) #taking input from user
+        choice = int(input("Enter your choice (1-9): ")) #taking input from user
+        print("") #too print empty line
 
         #handling the choices made by player
         if choice == 1:
@@ -29,7 +30,7 @@ def main_menu():
         
         elif choice == 3:
             #print("\nCompare Elements feature coming soon.")
-            campare_elements(elements)
+            compare_elements(elements)
         
         elif choice == 4:
             #print("\nCategory feature coming soon.")
@@ -162,7 +163,7 @@ def search_element(elements):
 #search_element(elements)
 
 #defining function to campare two elements
-def campare_elements(elements):
+def compare_elements(elements):
     #taking input from user
     first = int(input("Enter first atomic number: "))
     second = int(input("Enter second atomic number: "))
@@ -187,7 +188,7 @@ def campare_elements(elements):
 
     else:
         print("One or both elements not found.")
-#campare_elements(elements)
+#campore_elements(elements)
 
 
 #defining function to search by categories
@@ -249,8 +250,10 @@ def categories(elements):
 def discovery_timeline(elements):
 
     #displaying the discovery timeline menu
-    print("===== Discovery Timeline ====\n")
-    print("1. Ancient Elements")
+    print("+"+"="*40+"+")
+    print("|           Discovery Timeline           |")
+    print("+"+"="*40+"+")
+    print("|","1. Ancient Elements"," "*20,"|")
     print("2. 1800-1899")
     print("3. 1900-1999")
     print("4. 2000 onwards")
@@ -309,6 +312,14 @@ def quiz(elements):
     print("\nQuiz Finished!")
     print("Your score:",score,"/5")
 
+    #congratulation display
+    if score == 5:
+        print("Excellent! Perfect score!")
+    elif score >= 3:
+        print("Well done!")
+    else:
+        print("Keep practicing!")
+
     #storing user score
     name = input("Enter  your name: ")
     
@@ -321,9 +332,14 @@ def quiz(elements):
 def highest_scores():
     file = open("scores.txt","r")
 
+    print("+"+"="*40,"HIGHEST SCORES","="*40+"+")
+    print("|","Name\t\tScore"," "*74,"|")
+    print("+"+"-"*96+"+")
+
     for line in file:
         data = line.strip().split("|")
-        print(data[0], "-", data[1])
+        print("|",data[0], "\t\t", data[1]," "*77,"|")
+    print("+"+"="*96+"+")
 
     file.close()
 #highest_scores()
@@ -384,8 +400,7 @@ def show_period_1 (elements):
     row[0] = get_symbol(1,elements) #group 1
     row[17] = get_symbol(2,elements) #group 18
 
-    row_layout(row)
-    
+    row_layout(row)    
 #show_period_1(elements)
 
 #defining function to get 2nd row of table layout
@@ -474,7 +489,9 @@ def show_actinides (elements):
 
 #defining function to display my elements in proper layout
 def show_collection():
-    print("\n🧪 YOUR PERIODIC TABLE COLLECTION 🧪\n")
+    print("="*110)
+    print("|"," "*37,"🧪", " DIGITAL PERIODIC TABLE ","🧪"," "*37,"|")
+    print("="*110,"\n")
     show_period_1(elements)
     show_period_2(elements)
     show_period_3(elements)
@@ -484,5 +501,6 @@ def show_collection():
     show_period_7(elements)
     show_lanthanides(elements)
     show_actinides(elements)
-
 #show_collection()
+
+main_menu()
