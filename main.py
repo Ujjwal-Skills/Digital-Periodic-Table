@@ -20,7 +20,8 @@ def main_menu():
 
         #handling the choices made by player
         if choice == 1:
-            print("\nView Periodic Table feature coming soon.")
+            #print("\nView Periodic Table feature coming soon.")
+            show_collection()
 
         elif choice == 2:
             #print("\nsearch element feature coming soon.")
@@ -335,3 +336,153 @@ def about():
         print(line,end="")
     file.close()
 #about()
+
+
+
+#functions for displaying periodic table in ASCII art for good UX
+#defining function for what should appear inside each cell of the periodic table
+def get_symbol(number,elements):
+    if number in elements:
+        return elements[number]["symbol"].center(2)
+    else:
+        return "??"
+#print(get_symbol(1,elements))
+
+#defining function so that each symbol will be placed inside a bordered ASCII “tile” 
+def make_cell(text):
+    top = "+----+"
+    middle = "|"+text.center(4)+"|"
+    bottom = "+----+"
+    return top,middle,bottom
+
+#defining function to display table row layout
+def row_layout(row):
+    top_line = ""
+    middle_line = ""
+    bottom_line = ""
+
+    for symbol in row:
+        if symbol == " ":
+            top_line += "      "
+            middle_line += "      "
+            bottom_line += "      "
+        else:
+            top,middle,bottom = make_cell(symbol)
+            top_line += top
+            middle_line += middle
+            bottom_line += bottom
+
+    print(top_line)
+    print(middle_line)
+    print(bottom_line)
+#row_layout(row)
+
+#defining function to get 1st row of table layout
+def show_period_1 (elements):
+    row = [" "]*18
+
+    row[0] = get_symbol(1,elements) #group 1
+    row[17] = get_symbol(2,elements) #group 18
+
+    row_layout(row)
+    
+#show_period_1(elements)
+
+#defining function to get 2nd row of table layout
+def show_period_2 (elements):
+    row = [" "]*18
+    row[0] = get_symbol(3,elements) #group 1
+    row[1] = get_symbol(4,elements) #group 2
+    for i in range(5,11):
+        j = i + 7
+        row[j] = get_symbol(i,elements) #group from 13 to 18
+    
+    row_layout(row)
+
+#defining function to get 3rd row of table layout
+def show_period_3 (elements):
+    row = [" "]*18
+    row[0] = get_symbol(11,elements) #group 1
+    row[1] = get_symbol(12,elements) #group 2
+    for i in range(13,19):
+        j = i - 1
+        row[j] = get_symbol(i,elements) #group from 13 to 18
+    
+    row_layout(row)
+
+#defining function to get 4th row of table layout
+def show_period_4 (elements):
+    row = [" "]*18
+    for i in range(19,37):
+        j = i - 19
+        row[j] = get_symbol(i,elements) #group from 1 to 18
+        
+    row_layout(row)
+
+#defining function to get 5th row of table layout
+def show_period_5 (elements):
+    row = [" "]*18
+    for i in range(37,55):
+        j = i - 37
+        row[j] = get_symbol(i,elements) #group from 1 to 18
+
+    row_layout(row)
+
+#defining function to get 6th row of table layout
+def show_period_6 (elements):
+    row = [" "]*18
+    row[0] = get_symbol(55,elements) #group 1
+    row[1] = get_symbol(56,elements) #group 2
+    row[2] = get_symbol(57,elements) #group 3
+    for i in range(72,87):
+        j = (i+3) - 72
+        row[j] = get_symbol(i,elements) #group from 4 to 18
+    
+    row_layout(row)
+
+#defining function to get 7th row of table layout
+def show_period_7 (elements):
+    row = [" "]*18
+    row[0] = get_symbol(87,elements) #group 1
+    row[1] = get_symbol(88,elements) #group 2
+    row[2] = get_symbol(89,elements) #group 3
+    for i in range(104,119):
+        j = (i+3) - 104
+        row[j] = get_symbol(i,elements) #group from 4 to 18
+    
+    row_layout(row)
+
+#defining function to get lanthanides row of table layout
+def show_lanthanides (elements):
+    row = [" "]*18
+
+    for i in range(58,72):
+        j = (i+3) - 58
+        row[j] = get_symbol(i,elements) #group from 4 to 18
+
+    row_layout(row)
+
+#defining function to get actinides row of table layout
+def show_actinides (elements):
+    row = [" "]*18
+
+    for i in range(90,104):
+        j = (i+3) - 90
+        row[j] = get_symbol(i,elements) #group from 4 to 18
+    
+    row_layout(row)
+
+#defining function to display my elements in proper layout
+def show_collection():
+    print("\n🧪 YOUR PERIODIC TABLE COLLECTION 🧪\n")
+    show_period_1(elements)
+    show_period_2(elements)
+    show_period_3(elements)
+    show_period_4(elements)
+    show_period_5(elements)
+    show_period_6(elements)
+    show_period_7(elements)
+    show_lanthanides(elements)
+    show_actinides(elements)
+
+#show_collection()
