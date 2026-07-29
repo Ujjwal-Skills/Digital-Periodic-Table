@@ -133,8 +133,12 @@ def search_element(elements):
 
     #handling choice
     if choice == 1:
-        number = int(input("Enter atomic number: "))
-        info(number)
+        try:
+            number = int(input("Enter atomic number: "))
+            info(number)
+        except ValueError:
+            print("❌ Please enter a valid atomic number.")
+            return
 
     elif choice == 2:
         element_name = input("Enter the element name: ").strip().lower()
@@ -168,30 +172,34 @@ def search_element(elements):
 
 #defining function to campare two elements
 def compare_elements(elements):
+    try:
     #taking input from user
-    first = int(input("Enter first atomic number: "))
-    second = int(input("Enter second atomic number: "))
+        first = int(input("Enter first atomic number: "))
+        second = int(input("Enter second atomic number: "))
 
-    if first in elements and second in elements:
-        #putting sepecific element dictionary asked into element1 and element2
-        element1 = elements[first]
-        element2 = elements[second]
+        if first in elements and second in elements:
+            #putting sepecific element dictionary asked into element1 and element2
+            element1 = elements[first]
+            element2 = elements[second]
 
-        #displaying campareing table
-        print("\n==== COMPARISON ====")
-        print("Propery            Element 1            Element 2")
-        print("-"*50)
+            #displaying campareing table
+            print("\n==== COMPARISON ====")
+            print("Propery            Element 1            Element 2")
+            print("-"*50)
 
-        print("Name:              ", element1["name"], "              ", element2["name"])
-        print("Symbol:                ", element1["symbol"], "                ", element2["symbol"])
-        print("Atomic Mass:        ", element1["atomic_mass"], "           ", element2["atomic_mass"])
-        print("Category:         ", element1["category"], "            ", element2["category"])
-        print("Group:                ", element1["group"], "                   ", element2["group"])
-        print("Period:              ", element1["period"], "                   ", element2["period"])
-        print("State:           ", element1["state"], "            ", element2["state"])
+            print("Name:              ", element1["name"], "              ", element2["name"])
+            print("Symbol:                ", element1["symbol"], "                ", element2["symbol"])
+            print("Atomic Mass:        ", element1["atomic_mass"], "           ", element2["atomic_mass"])
+            print("Category:         ", element1["category"], "            ", element2["category"])
+            print("Group:                ", element1["group"], "                   ", element2["group"])
+            print("Period:              ", element1["period"], "                   ", element2["period"])
+            print("State:           ", element1["state"], "            ", element2["state"])
 
-    else:
-        print("One or both elements not found.")
+        else:
+            print("One or both elements not found.")
+
+    except ValueError:
+        print("❌ Please enter a valid atomic number.")
 #campore_elements(elements)
 
 
@@ -210,44 +218,48 @@ def categories(elements):
     print("9. Lanthanide")
     print("10. Actinide")
 
-    choice = int(input("Enter the choice (1-10): "))
+    try:
+        choice = int(input("Enter the choice (1-10): "))
 
-    #handling choice
-    if choice == 1:
-        category = "Alkali Metal"
-    elif choice == 2:
-        category = "Alkaline Earth Metal"
-    elif choice == 3:
-            category = "Transition Metal"
-    elif choice == 4:
-        category = "Post-transition Metal"
-    elif choice == 5:
-        category = "Metalloid"
-    elif choice == 6:
-        category = "Non-metal"
-    elif choice == 7:
-        category = "Halogen"
-    elif choice == 8:
-        category = "Noble Gas"
-    elif choice == 9:
-        category = "Lanthanide"
-    elif choice == 10:
-        category = "Actinide"
-    else:
-        print("Invalid choice.")
-        return
+        #handling choice
+        if choice == 1:
+            category = "Alkali Metal"
+        elif choice == 2:
+            category = "Alkaline Earth Metal"
+        elif choice == 3:
+                category = "Transition Metal"
+        elif choice == 4:
+            category = "Post-transition Metal"
+        elif choice == 5:
+            category = "Metalloid"
+        elif choice == 6:
+            category = "Non-metal"
+        elif choice == 7:
+            category = "Halogen"
+        elif choice == 8:
+            category = "Noble Gas"
+        elif choice == 9:
+            category = "Lanthanide"
+        elif choice == 10:
+            category = "Actinide"
+        else:
+            print("Invalid choice.")
+            return
 
-    #displaying category table
-    print("\nAtomic No.\tSymbol\tName")
-    print("-"*30)
+        #displaying category table
+        print("\nAtomic No.\tSymbol\tName")
+        print("-"*30)
 
-    for atomic_number in elements:
-        if elements[atomic_number]["category"] == category: #checks the element category if its present in elements
-            print(
-                atomic_number,
-                elements[atomic_number]["symbol"],
-                elements[atomic_number]["name"]
-            )
+        for atomic_number in elements:
+            if elements[atomic_number]["category"] == category: #checks the element category if its present in elements
+                print(
+                    atomic_number,
+                    elements[atomic_number]["symbol"],
+                    elements[atomic_number]["name"]
+                )
+
+    except ValueError:
+        print("❌ Invalid choice. Enter a number from 1 to 10.")
 #categories(elements)
 
 #defining the discovery timeline function
@@ -263,33 +275,37 @@ def discovery_timeline(elements):
     print("4. 2000 onwards")
 
     #taking input from user
-    choice = int(input("Enter the choice (1-4): "))
+    try:
+        choice = int(input("Enter the choice (1-4): "))
 
-    #displaying discovery timeline table
-    print("Atomic No.\tYear\tName")
-    print("-"*30)
+        #displaying discovery timeline table
+        print("Atomic No.\tYear\tName")
+        print("-"*30)
 
-    for atomic_number in elements: #looping through all element
-        year = elements[atomic_number]["year"]
+        for atomic_number in elements: #looping through all element
+            year = elements[atomic_number]["year"]
 
-        #handling choice
-        if year == "Ancient":
-            if choice == 1:
-                print(atomic_number,"   ",elements[atomic_number]["year"],"   ",elements[atomic_number]["name"])
-
-        if year != "Ancient":
-            year = int(year)
-            if choice == 2: 
-                if 1800 <= year <=1899:
+            #handling choice
+            if year == "Ancient":
+                if choice == 1:
                     print(atomic_number,"   ",elements[atomic_number]["year"],"   ",elements[atomic_number]["name"])
 
-            if choice == 3:  
-                if 1900 <= year <=1999:
-                    print(atomic_number,"   ",elements[atomic_number]["year"],"   ",elements[atomic_number]["name"])
+            if year != "Ancient":
+                year = int(year)
+                if choice == 2: 
+                    if 1800 <= year <=1899:
+                        print(atomic_number,"   ",elements[atomic_number]["year"],"   ",elements[atomic_number]["name"])
 
-            if choice == 4:   
-                if 2000 <= year :
-                    print(atomic_number,"   ",elements[atomic_number]["year"],"   ",elements[atomic_number]["name"])
+                if choice == 3:  
+                    if 1900 <= year <=1999:
+                        print(atomic_number,"   ",elements[atomic_number]["year"],"   ",elements[atomic_number]["name"])
+
+                if choice == 4:   
+                    if 2000 <= year :
+                        print(atomic_number,"   ",elements[atomic_number]["year"],"   ",elements[atomic_number]["name"])
+
+    except ValueError:
+        print("❌ Invalid choice. Enter a number from 1 to 4.")
 #discovery_timeline(elements)
 
 #defining the function for quiz
