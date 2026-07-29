@@ -47,10 +47,11 @@ def main_menu():
             highest_scores()
 
         elif choice == 8:
-            print("\nAbout feature coming soon.")
+            #print("\nAbout feature coming soon.")
+            about()
 
-        elif choice == 8:
-            print("\nThank you for using the project.")
+        elif choice == 9:
+            print("\nThank you for using the Digital Periodic Table!.")
             break
 
         else:
@@ -315,6 +316,7 @@ def quiz(elements):
     file.close()
 #quiz(elements)
 
+#defining the function for highest scores
 def highest_scores():
     file = open("scores.txt","r")
 
@@ -324,3 +326,12 @@ def highest_scores():
 
     file.close()
 #highest_scores()
+
+#defining the function for about
+def about():
+    file = open("README.txt","r")
+
+    for line in file:
+        print(line,end="")
+    file.close()
+#about()
