@@ -29,18 +29,22 @@ def main_menu():
             campare_elements(elements)
         
         elif choice == 4:
-            print("\nQuiz feature coming soon.")
+            #print("\nCategory feature coming soon.")
+            categories(elements)
 
         elif choice == 5:
-                    print("\nHighest Scores feature coming soon.")
-
-        elif choice == 5:
-            print("\nHighest Scores feature coming soon.")
+            print("\nDiscovery Timeline feature coming soon.")
 
         elif choice == 6:
-            print("\nAbout feature coming soon.")
+            print("\nQuiz Challenge feature coming soon.")
 
         elif choice == 7:
+            print("\nHighest Scores feature coming soon.")
+
+        elif choice == 8:
+            print("\nAbout feature coming soon.")
+
+        elif choice == 8:
             print("\nThank you for using the project.")
             break
 
