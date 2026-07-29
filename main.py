@@ -34,7 +34,8 @@ def main_menu():
             categories(elements)
 
         elif choice == 5:
-            print("\nDiscovery Timeline feature coming soon.")
+            #print("\nDiscovery Timeline feature coming soon.")
+            discovery_timeline(elements)
 
         elif choice == 6:
             print("\nQuiz Challenge feature coming soon.")
@@ -57,7 +58,7 @@ def load_elements():
 
     elements = {} #empty dictionary which later updated by each element dictionary
 
-    file = open("table/elements.txt", "r")
+    file = open("elements.txt", "r")
 
     for line in file:
         data = line.strip().split("|")
@@ -238,3 +239,44 @@ def categories(elements):
                 elements[atomic_number]["name"]
             )
 #categories(elements)
+
+#defining the discovery timeline function
+def discovery_timeline(elements):
+
+    #displaying the discovery timeline menu
+    print("===== Discovery Timeline ====\n")
+    print("1. Ancient Elements")
+    print("2. 1800-1899")
+    print("3. 1900-1999")
+    print("4. 2000 onwards")
+
+    #taking input from user
+    choice = int(input("Enter the choice (1-4): "))
+
+    #displaying discovery timeline table
+    print("Atomic No.\tYear\tName")
+    print("-"*30)
+
+    for atomic_number in elements: #looping through all element
+        year = elements[atomic_number]["year"]
+
+        #handling choice
+        if year == "Ancient":
+            if choice == 1:
+                print(atomic_number,"   ",elements[atomic_number]["year"],"   ",elements[atomic_number]["name"])
+
+        if year != "Ancient":
+            year = int(year)
+            if choice == 2: 
+                if 1800 <= year <=1899:
+                    print(atomic_number,"   ",elements[atomic_number]["year"],"   ",elements[atomic_number]["name"])
+
+            if choice == 3:  
+                if 1900 <= year <=1999:
+                    print(atomic_number,"   ",elements[atomic_number]["year"],"   ",elements[atomic_number]["name"])
+
+            if choice == 4:   
+                if 2000 <= year :
+                    print(atomic_number,"   ",elements[atomic_number]["year"],"   ",elements[atomic_number]["name"])
+
+#discovery_timeline(elements)
