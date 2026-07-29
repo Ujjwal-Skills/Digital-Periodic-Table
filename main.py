@@ -2,6 +2,7 @@
 def main_menu():
     #seed = 53
     while True: #Return to the menu until player chooses to exit
+        #displaying main menu
         print("\n+=================== MAIN MENU ===================+\n")
         print("1. View Periodic Table")
         print("2. 🔍 Search Element")
@@ -54,14 +55,14 @@ def main_menu():
 #defining the function for reading the elements file 
 def load_elements():
 
-    elements = {}
+    elements = {} #empty dictionary which later updated by each element dictionary
 
     file = open("table/elements.txt", "r")
 
     for line in file:
         data = line.strip().split("|")
 
-        atomic_number = int(data[0])
+        atomic_number = int(data[0]) #returns the atomic number of current element
 
         elements[atomic_number] = {
             "atom_number": data[0],
@@ -84,8 +85,9 @@ elements = load_elements()
 #defining function to display elements info
 def info(number):
     if number in elements:
-        element = elements[number]
+        element = elements[number] #assigning specific element dictionary data into element
 
+        #displaying element info
         print("========================================")
         print("⚛️ ELEMENT INFORMATION")
         print("========================================")
@@ -109,7 +111,8 @@ def info(number):
 
 #defining function to search elements
 def search_element(elements):
-
+    
+    #displaying menu for search
     print("\n==== Search Element ====")
     print("1. Search by Atomic Number")
     print("2. Search by Name")
@@ -117,6 +120,7 @@ def search_element(elements):
 
     choice = int(input("Enter your choice (1-3): "))
 
+    #handling choice
     if choice == 1:
         number = int(input("Enter atomic number: "))
         info(number)
@@ -124,10 +128,10 @@ def search_element(elements):
     elif choice == 2:
         element_name = input("Enter the element name: ").strip().lower()
 
-        found = False
+        found = False #start with element not found
 
         for atomic_number in elements:
-            if elements[atomic_number]["name"].strip().lower() == element_name:
+            if elements[atomic_number]["name"].strip().lower() == element_name: #checks the element name if its present in elements
                 #element = elements[atomic_number]
                 info(atomic_number)
                 found = True
@@ -139,10 +143,10 @@ def search_element(elements):
     elif choice == 3:
         element_symbol = input("Enter the element symbol: ").strip().lower()
 
-        found = False
+        found = False #start with element not found
 
         for atomic_number in elements:
-            if elements[atomic_number]["symbol"].strip().lower() == element_symbol:
+            if elements[atomic_number]["symbol"].strip().lower() == element_symbol: #checks the element symbol if its present in elements
                 info(atomic_number)
                 found = True
                 break
@@ -153,13 +157,16 @@ def search_element(elements):
 
 #defining function to campare two elements
 def campare_elements(elements):
+    #taking input from user
     first = int(input("Enter first atomic number: "))
     second = int(input("Enter second atomic number: "))
 
     if first in elements and second in elements:
+        #putting sepecific element dictionary asked into element1 and element2
         element1 = elements[first]
         element2 = elements[second]
 
+        #displaying campareing table
         print("\n==== COMPARISON ====")
         print("Propery            Element 1            Element 2")
         print("-"*50)
@@ -179,6 +186,7 @@ def campare_elements(elements):
 
 #defining function to search by categories
 def categories(elements):
+    #displaying category menu
     print("==== Categories ====")
     print("1. Alkali Metal")
     print("2. Alkaline Earth Metal")
@@ -193,6 +201,7 @@ def categories(elements):
 
     choice = int(input("Enter the choice (1-10): "))
 
+    #handling choice
     if choice == 1:
         category = "Alkali Metal"
     elif choice == 2:
@@ -217,15 +226,15 @@ def categories(elements):
         print("Invalid choice.")
         return
 
+    #displaying category table
     print("\nAtomic No.\tSymbol\tName")
     print("-"*30)
 
     for atomic_number in elements:
-        if elements[atomic_number]["category"] == category:
+        if elements[atomic_number]["category"] == category: #checks the element category if its present in elements
             print(
                 atomic_number,
                 elements[atomic_number]["symbol"],
                 elements[atomic_number]["name"]
             )
-
-categories(elements)
+#categories(elements)
