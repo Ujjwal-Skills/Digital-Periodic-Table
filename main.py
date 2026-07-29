@@ -114,21 +114,24 @@ def info(number):
         print("+"+"="*50+"+")'''
 
         print_title("ELEMENT INFORMATION")
-        print("Name:",element["name"])
-        print("Symbol:",element["symbol"])
-        print("Atomic Number:",element["atom_number"])
-        print("Atomic Mass:",element["atomic_mass"])
-        print("Category:",element["category"])
-        print("Group:",element["group"])
-        print("Period:",element["period"])
-        print("State:",element["state"])
+        print(f"{'| '}{'Name':<20}: {element['name']:<57}{'|'}")
+        print(f"{'| '}{'Symbol':<20}: {element['symbol']:<57}{'|'}")
+        print(f"{'| '}{'Atomic Number':<20}: {element['atom_number']:<57}{'|'}")
+        print(f"{'| '}{'Atomic Mass':<20}: {element['atomic_mass']:<57}{'|'}")
+        print(f"{'| '}{'Category':<20}: {element['category']:<57}{'|'}")
+        print(f"{'| '}{'Group':<20}: {element['group']:<57}{'|'}")
+        print(f"{'| '}{'Period':<20}: {element['period']:<57}{'|'}")
+        print(f"{'| '}{'State':<20}: {element['state']:<57}{'|'}")
+        print(f"{'| '}{'Discovered By':<20}: {element['discovered_by']:<57}{'|'}")
+        print("|" + " "*80 + "|")
+        print(f"{'| '}{'💡 Fun Fact:':<19}: {element['fun_fact']:<57}{'|'}")
+        print("+"+"="*80+"+")
+
+        '''
         #print("Melting Point:",elements[number]["melting"])
         #print("Boiling Point:",elements[number]["boiling"])
-        print("Discovered By:",element["discovered_by"])
-        print("Year of Discovery:",element["year"])
-        print("\n💡 Fun Fact:",element["fun_fact"])
-
-        print("+"+"="*50+"+")
+        '''
+         
     else:
         print("Element not found.")
 
@@ -408,7 +411,7 @@ def highest_scores():
     
         #print("+"+"="*40,"HIGHEST SCORES","="*40+"+")
         print_title("HIGHEST SCORES")
-        print("|","Name\t\tScore"," "*58,"|")
+        print("|","Name\t\tScore"," "*57,"|")
         print("+"+"-"*80+"+")
 
         found = False
@@ -416,7 +419,7 @@ def highest_scores():
         for line in file:
             found = True
             data = line.strip().split("|")
-            print("|",data[0], "\t\t", data[1]," "*58,"|")
+            print("|",data[0], "\t\t", data[1]," "*57,"|")
 
         if not found: #handling empty score file
             print("|","No scores available yet."," "*53,"|")
@@ -567,8 +570,8 @@ def show_period_7 (elements):
 def show_lanthanides (elements):
     row = [" "]*18
 
-    for i in range(58,72):
-        j = (i+3) - 58
+    for i in range(57,72):
+        j = (i+3) - 57
         row[j] = get_symbol(i,elements) #group from 4 to 18
 
     row_layout(row)
