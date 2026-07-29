@@ -204,16 +204,17 @@ def compare_elements(elements):
             #print("\n==== COMPARISON ====")
 
             print_title("COMPARE ELEMENTS")
-            print("Property            Element 1            Element 2")
-            print("-"*82)
+            print(f"{'| '}{'Property':<23}{'Element 1':<28}{'Element 2':<28}{'|'}")
+            print("+"+"-" * 80+"+")
 
-            print("Name:              ", element1["name"], "              ", element2["name"])
-            print("Symbol:                ", element1["symbol"], "                ", element2["symbol"])
-            print("Atomic Mass:        ", element1["atomic_mass"], "           ", element2["atomic_mass"])
-            print("Category:         ", element1["category"], "            ", element2["category"])
-            print("Group:                ", element1["group"], "                   ", element2["group"])
-            print("Period:              ", element1["period"], "                   ", element2["period"])
-            print("State:           ", element1["state"], "            ", element2["state"])
+            print(f"{'| '}{'Name':<23}{element1['name']:<28}{element2['name']:<28}{'|'}")
+            print(f"{'| '}{'Symbol':<23}{element1['symbol']:<28}{element2['symbol']:<28}{'|'}")
+            print(f"{'| '}{'Atomic Mass':<23}{element1['atomic_mass']:<28}{element2['atomic_mass']:<28}{'|'}")
+            print(f"{'| '}{'Category':<23}{element1['category']:<28}{element2['category']:<28}{'|'}")
+            print(f"{'| '}{'Group':<23}{element1['group']:<28}{element2['group']:<28}{'|'}")
+            print(f"{'| '}{'Period':<23}{element1['period']:<28}{element2['period']:<28}{'|'}")
+            print(f"{'| '}{'State':<23}{element1['state']:<28}{element2['state']:<28}{'|'}")
+            print("+"+"=" * 80+"+")
 
         else:
             print("One or both elements not found.")
@@ -302,7 +303,7 @@ def discovery_timeline(elements):
     print("|","1. Ancient Elements"," "*18,"|")
     print("2. 1800-1899")
     print("3. 1900-1999")
-    print("4. 2000 onwards")
+    print("4. 2300 onwards")
 
     #taking input from user
     try:
@@ -334,7 +335,7 @@ def discovery_timeline(elements):
                         print(atomic_number,"   ",elements[atomic_number]["year"],"   ",elements[atomic_number]["name"])
 
                 if choice == 4:   
-                    if 2000 <= year :
+                    if 2300 <= year :
                         print(atomic_number,"   ",elements[atomic_number]["year"],"   ",elements[atomic_number]["name"])
 
     except ValueError:
