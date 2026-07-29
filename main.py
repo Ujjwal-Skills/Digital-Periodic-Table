@@ -7,7 +7,7 @@ def main_menu(elements):
         print("\n+=================== MAIN MENU ===================+\n")
         print("1. View Periodic Table")
         print("2. 🔍 Search Element")
-        print("3. Campare Elements")
+        print("3. Compare Elements")
         print("4. Categories")
         print("5. Discovery Timeline")
         print("6. 🧠 Quiz Challenge")
@@ -18,7 +18,7 @@ def main_menu(elements):
 
         try:
             choice = int(input("Enter your choice (1-9): ")) #taking input from user
-            #chaking valid range
+            #checking valid range
             if choice < 1 or choice > 9:
                 print("Please select between 1 and 9.")
 
@@ -144,7 +144,7 @@ def search_element(elements):
     if choice == 1:
         try:
             number = int(input("Enter atomic number: "))
-            #chaking valid range
+            #checking valid range
             if number < 1 or number > 118:
                 print("Atomic number must be between 1 and 118.")
                 return 
@@ -185,7 +185,7 @@ def search_element(elements):
     input("\nPress Enter to return to the Main Menu...")
 #search_element(elements)
 
-#defining function to campare two elements
+#defining function to compare two elements
 def compare_elements(elements):
     try:
     #taking input from user
@@ -193,13 +193,13 @@ def compare_elements(elements):
         second = int(input("Enter second atomic number: "))
 
         if first in elements and second in elements:
-            #putting sepecific element dictionary asked into element1 and element2
+            #putting specific element dictionary asked into element1 and element2
             element1 = elements[first]
             element2 = elements[second]
 
-            #displaying campareing table
+            #displaying comparing table
             print("\n==== COMPARISON ====")
-            print("Propery            Element 1            Element 2")
+            print("Property            Element 1            Element 2")
             print("-"*50)
 
             print("Name:              ", element1["name"], "              ", element2["name"])
@@ -218,7 +218,7 @@ def compare_elements(elements):
 
     #to give clean output look
     input("\nPress Enter to return to the Main Menu...")
-#campore_elements(elements)
+#compare elements(elements)
 
 #defining function to search by categories
 def categories(elements):
@@ -239,7 +239,7 @@ def categories(elements):
 
     try:
         choice = int(input("Enter the choice (1-10): "))
-        #chaking valid range
+        #checking valid range
         if choice < 1 or choice > 10:
             print("Please select between 1 and 10.")
 
@@ -302,7 +302,7 @@ def discovery_timeline(elements):
     #taking input from user
     try:
         choice = int(input("Enter the choice (1-4): "))
-        #chaking valid range
+        #checking valid range
         if choice < 1 or choice > 4:
             print("Please select between 1 and 4.")
 
