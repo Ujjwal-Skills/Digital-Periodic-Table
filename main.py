@@ -1,7 +1,7 @@
 import random
 
 # defining the function for the main menu
-def main_menu():
+def main_menu(elements):
     while True: #Return to the menu until player chooses to exit
         #displaying main menu
         print("\n+=================== MAIN MENU ===================+\n")
@@ -61,7 +61,7 @@ def main_menu():
             about()
 
         elif choice == 9:
-            print("\nThank you for using the Digital Periodic Table!.")
+            print("\nThank you for using the Digital Periodic Table!.\n")
             break
 
         else:
@@ -100,7 +100,7 @@ def load_elements():
     except FileNotFoundError:
         print("elements.txt was not found.")
         return {}
-#elements = load_elements()
+elements = load_elements()
 
 #defining function to display elements info
 def info(number):
@@ -108,9 +108,9 @@ def info(number):
         element = elements[number] #assigning specific element dictionary data into element
 
         #displaying element info
-        print("========================================")
-        print("⚛️ ELEMENT INFORMATION")
-        print("========================================")
+        print("+"+"="*50+"+")
+        print("|               ⚛️ ELEMENT INFORMATION              |")
+        print("+"+"="*50+"+")
         print("Name:",element["name"])
         print("Symbol:",element["symbol"])
         print("Atomic Number:",element["atom_number"])
@@ -125,7 +125,7 @@ def info(number):
         print("Year of Discovery:",element["year"])
         print("\n💡 Fun Fact:",element["fun_fact"])
 
-        print("========================================")
+        print("+"+"="*50+"+")
     else:
         print("Element not found.")
 
@@ -181,6 +181,8 @@ def search_element(elements):
 
         if not found:
             print("Element not found.")
+    #to give clean output look
+    input("\nPress Enter to return to the Main Menu...")
 #search_element(elements)
 
 #defining function to campare two elements
@@ -213,13 +215,17 @@ def compare_elements(elements):
 
     except ValueError:
         print("❌ Please enter a valid atomic number.")
-#campore_elements(elements)
 
+    #to give clean output look
+    input("\nPress Enter to return to the Main Menu...")
+#campore_elements(elements)
 
 #defining function to search by categories
 def categories(elements):
     #displaying category menu
-    print("==== Categories ====")
+    print("+"+"="*40+"+")
+    print("|           ELEMENT CATEGORIES           |")
+    print("+"+"="*40+"+")
     print("1. Alkali Metal")
     print("2. Alkaline Earth Metal")
     print("3. Transition Metal")
@@ -276,6 +282,9 @@ def categories(elements):
 
     except ValueError:
         print("❌ Invalid choice. Enter a number from 1 to 10.")
+
+    #to give clean output look
+    input("\nPress Enter to return to the Main Menu...")
 #categories(elements)
 
 #defining the discovery timeline function
@@ -283,9 +292,9 @@ def discovery_timeline(elements):
 
     #displaying the discovery timeline menu
     print("+"+"="*40+"+")
-    print("|           Discovery Timeline           |")
+    print("|           DISCOVERY TIMELINE           |")
     print("+"+"="*40+"+")
-    print("|","1. Ancient Elements"," "*20,"|")
+    print("|","1. Ancient Elements"," "*18,"|")
     print("2. 1800-1899")
     print("3. 1900-1999")
     print("4. 2000 onwards")
@@ -325,11 +334,18 @@ def discovery_timeline(elements):
 
     except ValueError:
         print("❌ Invalid choice. Enter a number from 1 to 4.")
+
+    #to give clean output look
+    input("\nPress Enter to return to the Main Menu...")
 #discovery_timeline(elements)
 
 #defining the function for quiz
 def quiz(elements):
     score = 0 #Initializing the score
+
+    print("+"+"="*50+"+")
+    print("|                  QUIZ CHALLENGE                  |")
+    print("+"+"="*50+"+")
 
     for question in range(1,6):
         number = random.randint(1, 118)
@@ -365,6 +381,9 @@ def quiz(elements):
     file = open("scores.txt","a")
     file.write(name +"|"+ str(score)+"\n")
     file.close()
+
+    #to give clean output look
+    input("\nPress Enter to return to the Main Menu...")
 #quiz(elements)
 
 #defining the function for highest scores
@@ -388,6 +407,10 @@ def highest_scores():
 
         print("+"+"="*96+"+")
         file.close()
+
+        #to give clean output look
+        input("\nPress Enter to return to the Main Menu...")
+
     except FileNotFoundError:
         print("scores.txt was not found.")
         return{}
@@ -401,6 +424,10 @@ def about():
         for line in file:
             print(line,end="")
         file.close()
+
+        #to give clean output look
+        input("\nPress Enter to return to the Main Menu...")
+
     except FileNotFoundError:
         print("README.txt was not found.")
         return{}
@@ -554,6 +581,9 @@ def show_collection(elements):
     show_period_7(elements)
     show_lanthanides(elements)
     show_actinides(elements)
+
+    #to give clean output look
+    input("\nPress Enter to return to the Main Menu...")
 #show_collection(elements)
 
-main_menu()
+main_menu(elements)
