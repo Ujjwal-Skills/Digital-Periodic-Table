@@ -18,6 +18,10 @@ def main_menu():
 
         try:
             choice = int(input("Enter your choice (1-9): ")) #taking input from user
+            #chaking valid range
+            if choice < 1 or choice > 9:
+                print("Please select between 1 and 9.")
+
         except ValueError:
             print("❌ Invalid choice. Enter a number from 1 to 9.")
             continue
@@ -68,30 +72,35 @@ def load_elements():
 
     elements = {} #empty dictionary which later updated by each element dictionary
 
-    file = open("elements.txt", "r")
+    #handling missing file crash
+    try:
+        file = open("elements.txt", "r")
 
-    for line in file:
-        data = line.strip().split("|")
+        for line in file:
+            data = line.strip().split("|")
 
-        atomic_number = int(data[0]) #returns the atomic number of current element
+            atomic_number = int(data[0]) #returns the atomic number of current element
 
-        elements[atomic_number] = {
-            "atom_number": data[0],
-            "name": data[1],
-            "symbol": data[2],
-            "atomic_mass": float(data[3]),
-            "category": data[4],
-            "group": int(data[5]),
-            "period": int(data[6]),
-            "state": data[7],
-            "discovered_by": data[8],
-            "year": data[9],
-            "fun_fact": data[10]
-        }
+            elements[atomic_number] = {
+                "atom_number": data[0],
+                "name": data[1],
+                "symbol": data[2],
+                "atomic_mass": float(data[3]),
+                "category": data[4],
+                "group": int(data[5]),
+                "period": int(data[6]),
+                "state": data[7],
+                "discovered_by": data[8],
+                "year": data[9],
+                "fun_fact": data[10]
+            }
 
-    file.close()
-    return elements
-elements = load_elements()
+        file.close()
+        return elements
+    except FileNotFoundError:
+        print("elements.txt was not found.")
+        return {}
+#elements = load_elements()
 
 #defining function to display elements info
 def info(number):
@@ -135,6 +144,10 @@ def search_element(elements):
     if choice == 1:
         try:
             number = int(input("Enter atomic number: "))
+            #chaking valid range
+            if number < 1 or number > 118:
+                print("Atomic number must be between 1 and 118.")
+                return 
             info(number)
         except ValueError:
             print("❌ Please enter a valid atomic number.")
@@ -220,6 +233,9 @@ def categories(elements):
 
     try:
         choice = int(input("Enter the choice (1-10): "))
+        #chaking valid range
+        if choice < 1 or choice > 10:
+            print("Please select between 1 and 10.")
 
         #handling choice
         if choice == 1:
@@ -277,6 +293,9 @@ def discovery_timeline(elements):
     #taking input from user
     try:
         choice = int(input("Enter the choice (1-4): "))
+        #chaking valid range
+        if choice < 1 or choice > 4:
+            print("Please select between 1 and 4.")
 
         #displaying discovery timeline table
         print("Atomic No.\tYear\tName")
@@ -350,27 +369,41 @@ def quiz(elements):
 
 #defining the function for highest scores
 def highest_scores():
-    file = open("scores.txt","r")
+    try: #handling missing file crash
+        file = open("scores.txt","r")
+    
+        print("+"+"="*40,"HIGHEST SCORES","="*40+"+")
+        print("|","Name\t\tScore"," "*74,"|")
+        print("+"+"-"*96+"+")
 
-    print("+"+"="*40,"HIGHEST SCORES","="*40+"+")
-    print("|","Name\t\tScore"," "*74,"|")
-    print("+"+"-"*96+"+")
+        found = False
 
-    for line in file:
-        data = line.strip().split("|")
-        print("|",data[0], "\t\t", data[1]," "*77,"|")
-    print("+"+"="*96+"+")
+        for line in file:
+            found = True
+            data = line.strip().split("|")
+            print("|",data[0], "\t\t", data[1]," "*77,"|")
 
-    file.close()
+        if not found: #handling empty score file
+            print("|","No scores available yet."," "*69,"|")
+
+        print("+"+"="*96+"+")
+        file.close()
+    except FileNotFoundError:
+        print("scores.txt was not found.")
+        return{}
 #highest_scores()
 
 #defining the function for about
 def about():
-    file = open("README.txt","r")
+    try: #handling missing file crash
+        file = open("README.txt","r")
 
-    for line in file:
-        print(line,end="")
-    file.close()
+        for line in file:
+            print(line,end="")
+        file.close()
+    except FileNotFoundError:
+        print("README.txt was not found.")
+        return{}
 #about()
 
 
