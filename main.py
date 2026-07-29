@@ -6,16 +6,16 @@ def main_menu(elements):
         #displaying main menu
         #print("\n+=================== MAIN MENU ===================+\n")
         print_title("MAIN MENU")
-        print("1. View Periodic Table")
-        print("2. 🔍 Search Element")
-        print("3. Compare Elements")
-        print("4. Categories")
-        print("5. Discovery Timeline")
-        print("6. 🧠 Quiz Challenge")
-        print("7. Highest Scores")
-        print("8. About")
-        print("9. 🚪 Exit")
-        print("="*45)
+        print(f"{'| '}{'1. View Periodic Table':<77}{'|'}")
+        print(f"{'| '}{'2. 🔍 Search Element':<76}{'|'}")
+        print(f"{'| '}{'3. Compare Elements':<77}{'|'}")
+        print(f"{'| '}{'4. Categories':<77}{'|'}")
+        print(f"{'| '}{'5. Discovery Timeline':<77}{'|'}")
+        print(f"{'| '}{'6. 🧠 Quiz Challenge':<76}{'|'}")
+        print(f"{'| '}{'7. Highest Scores':<77}{'|'}")
+        print(f"{'| '}{'8. About':<77}{'|'}")
+        print(f"{'| '}{'9. 🚪 Exit':<76}{'|'}")
+        print("+" + "="*78 + "+\n")
 
         try:
             choice = int(input("Enter your choice (1-9): ")) #taking input from user
@@ -123,15 +123,15 @@ def info(number):
         print(f"{'| '}{'Period':<20}: {element['period']:<57}{'|'}")
         print(f"{'| '}{'State':<20}: {element['state']:<57}{'|'}")
         print(f"{'| '}{'Discovered By':<20}: {element['discovered_by']:<57}{'|'}")
-        print("|" + " "*80 + "|")
+        print("|" + " "*78 + "|")
         print(f"{'| '}{'💡 Fun Fact:':<19}: {element['fun_fact']:<57}{'|'}")
-        print("+"+"="*80+"+")
+        print("+"+"="*78+"+")
 
         '''
         #print("Melting Point:",elements[number]["melting"])
         #print("Boiling Point:",elements[number]["boiling"])
         '''
-         
+
     else:
         print("Element not found.")
 
@@ -208,7 +208,7 @@ def compare_elements(elements):
 
             print_title("COMPARE ELEMENTS")
             print(f"{'| '}{'Property':<23}{'Element 1':<28}{'Element 2':<28}{'|'}")
-            print("+"+"-" * 80+"+")
+            print("+"+"-" * 78+"+")
 
             print(f"{'| '}{'Name':<23}{element1['name']:<28}{element2['name']:<28}{'|'}")
             print(f"{'| '}{'Symbol':<23}{element1['symbol']:<28}{element2['symbol']:<28}{'|'}")
@@ -217,7 +217,7 @@ def compare_elements(elements):
             print(f"{'| '}{'Group':<23}{element1['group']:<28}{element2['group']:<28}{'|'}")
             print(f"{'| '}{'Period':<23}{element1['period']:<28}{element2['period']:<28}{'|'}")
             print(f"{'| '}{'State':<23}{element1['state']:<28}{element2['state']:<28}{'|'}")
-            print("+"+"=" * 80+"+")
+            print("+"+"=" * 78+"+")
 
         else:
             print("One or both elements not found.")
@@ -412,7 +412,7 @@ def highest_scores():
         #print("+"+"="*40,"HIGHEST SCORES","="*40+"+")
         print_title("HIGHEST SCORES")
         print("|","Name\t\tScore"," "*57,"|")
-        print("+"+"-"*80+"+")
+        print("+"+"-"*78+"+")
 
         found = False
 
@@ -424,7 +424,7 @@ def highest_scores():
         if not found: #handling empty score file
             print("|","No scores available yet."," "*53,"|")
 
-        print("+"+"="*80+"+")
+        print("+"+"="*78+"+")
         file.close()
 
         #to give clean output look
@@ -609,7 +609,7 @@ def show_collection(elements):
 #for UX experience
 #defining the function to print uniform titles
 def print_title(title):
-    width = 80
+    width = 78
     print("\n" + "+" + "="*width + "+")
     print("|"+title.center(width)+"|")
     print("+" + "="*width + "+")
