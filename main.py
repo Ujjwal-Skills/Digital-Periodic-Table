@@ -411,7 +411,7 @@ def highest_scores():
     
         #print("+"+"="*40,"HIGHEST SCORES","="*40+"+")
         print_title("HIGHEST SCORES")
-        print("|","Name\t\tScore"," "*57,"|")
+        print(f"{'| '}{'Name':<47}{'Score':>29}{' |'}")
         print("+"+"-"*78+"+")
 
         found = False
@@ -419,10 +419,10 @@ def highest_scores():
         for line in file:
             found = True
             data = line.strip().split("|")
-            print("|",data[0], "\t\t", data[1]," "*57,"|")
+            print(f"{'| '}{data[0]:<47}{data[1]:>29}{' |'}")
 
         if not found: #handling empty score file
-            print("|","No scores available yet."," "*53,"|")
+            print("|","No scores available yet."," "*51,"|")
 
         print("+"+"="*78+"+")
         file.close()
