@@ -235,16 +235,17 @@ def categories(elements):
     print("+"+"="*40+"+")
     print("|           ELEMENT CATEGORIES           |")
     print("+"+"="*40+"+")
-    print("1. Alkali Metal")
-    print("2. Alkaline Earth Metal")
-    print("3. Transition Metal")
-    print("4. Post-transition Metal")
-    print("5. Metalloid")
-    print("6. Non-metal")
-    print("7. Halogen")
-    print("8. Noble Gas")
-    print("9. Lanthanide")
-    print("10. Actinide")
+    print(f"{'| '}{'1. Alkali Metal':<39}{'|'}")
+    print(f"{'| '}{'2. Alkaline Earth Metal':<39}{'|'}")
+    print(f"{'| '}{'3. Transition Metal':<39}{'|'}")
+    print(f"{'| '}{'4. Post-transition Metal':<39}{'|'}")
+    print(f"{'| '}{'5. Metalloid':<39}{'|'}")
+    print(f"{'| '}{'6. Non-metal':<39}{'|'}")
+    print(f"{'| '}{'7. Halogen':<39}{'|'}")
+    print(f"{'| '}{'8. Noble Gas':<39}{'|'}")
+    print(f"{'| '}{'9. Lanthanide':<39}{'|'}")
+    print(f"{'| '}{'10. Actinide':<39}{'|'}")
+    print("+"+"="*40+"+\n")
 
     try:
         choice = int(input("Enter the choice (1-10): "))
@@ -278,16 +279,14 @@ def categories(elements):
             return
 
         #displaying category table
-        print("\nAtomic No.\tSymbol\tName")
-        print("-"*30)
+        print("+" + "="*43 + "+")
+        print(f"{'| '}{'Atomic':<10}{'Symbol':<12}{'Name':<20}{'|'}")
+        print("+" + "-"*43 + "+")
 
         for atomic_number in elements:
             if elements[atomic_number]["category"] == category: #checks the element category if its present in elements
-                print(
-                    atomic_number,
-                    elements[atomic_number]["symbol"],
-                    elements[atomic_number]["name"]
-                )
+                print(f"{'| '}{atomic_number:<10}{elements[atomic_number]['symbol']:<12}{elements[atomic_number]['name']:<20}{'|'}")
+        print("+" + "="*43 + "+")
 
     except ValueError:
         print("❌ Invalid choice. Enter a number from 1 to 10.")
