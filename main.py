@@ -341,14 +341,21 @@ def discovery_timeline(elements):
 
 #defining the function for quiz
 def quiz(elements):
-    score = 0 #Initializing the score
 
     print("+"+"="*50+"+")
     print("|                  QUIZ CHALLENGE                  |")
     print("+"+"="*50+"+")
 
+    asked = []
+    score = 0 #Initializing the score
+        
     for question in range(1,6):
-        number = random.randint(1, 118)
+        while True:
+            number = random.randint(1, 118)
+            if number not in asked:
+                asked.append(number)
+                break
+
         element = elements[number]
 
         #question 1: What is the symbol of element
