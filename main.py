@@ -4,7 +4,8 @@ import random
 def main_menu(elements):
     while True: #Return to the menu until player chooses to exit
         #displaying main menu
-        print("\n+=================== MAIN MENU ===================+\n")
+        #print("\n+=================== MAIN MENU ===================+\n")
+        print_title("MAIN MENU")
         print("1. View Periodic Table")
         print("2. 🔍 Search Element")
         print("3. Compare Elements")
@@ -108,9 +109,11 @@ def info(number):
         element = elements[number] #assigning specific element dictionary data into element
 
         #displaying element info
-        print("+"+"="*50+"+")
+        '''print("+"+"="*50+"+")
         print("|               ⚛️ ELEMENT INFORMATION              |")
-        print("+"+"="*50+"+")
+        print("+"+"="*50+"+")'''
+
+        print_title("ELEMENT INFORMATION")
         print("Name:",element["name"])
         print("Symbol:",element["symbol"])
         print("Atomic Number:",element["atom_number"])
@@ -198,9 +201,11 @@ def compare_elements(elements):
             element2 = elements[second]
 
             #displaying comparing table
-            print("\n==== COMPARISON ====")
+            #print("\n==== COMPARISON ====")
+
+            print_title("COMPARE ELEMENTS")
             print("Property            Element 1            Element 2")
-            print("-"*50)
+            print("-"*82)
 
             print("Name:              ", element1["name"], "              ", element2["name"])
             print("Symbol:                ", element1["symbol"], "                ", element2["symbol"])
@@ -342,9 +347,11 @@ def discovery_timeline(elements):
 #defining the function for quiz
 def quiz(elements):
 
-    print("+"+"="*50+"+")
+    '''print("+"+"="*50+"+")
     print("|                  QUIZ CHALLENGE                  |")
-    print("+"+"="*50+"+")
+    print("+"+"="*50+"+")'''
+
+    print_title("QUIZ CHALLENGE")
 
     asked = []
     score = 0 #Initializing the score
@@ -398,21 +405,22 @@ def highest_scores():
     try: #handling missing file crash
         file = open("scores.txt","r")
     
-        print("+"+"="*40,"HIGHEST SCORES","="*40+"+")
-        print("|","Name\t\tScore"," "*74,"|")
-        print("+"+"-"*96+"+")
+        #print("+"+"="*40,"HIGHEST SCORES","="*40+"+")
+        print_title("HIGHEST SCORES")
+        print("|","Name\t\tScore"," "*58,"|")
+        print("+"+"-"*80+"+")
 
         found = False
 
         for line in file:
             found = True
             data = line.strip().split("|")
-            print("|",data[0], "\t\t", data[1]," "*77,"|")
+            print("|",data[0], "\t\t", data[1]," "*58,"|")
 
         if not found: #handling empty score file
-            print("|","No scores available yet."," "*69,"|")
+            print("|","No scores available yet."," "*53,"|")
 
-        print("+"+"="*96+"+")
+        print("+"+"="*80+"+")
         file.close()
 
         #to give clean output look
@@ -592,5 +600,15 @@ def show_collection(elements):
     #to give clean output look
     input("\nPress Enter to return to the Main Menu...")
 #show_collection(elements)
+
+
+#for UX experience
+#defining the function to print uniform titles
+def print_title(title):
+    width = 80
+    print("\n" + "+" + "="*width + "+")
+    print("|"+title.center(width)+"|")
+    print("+" + "="*width + "+")
+
 
 main_menu(elements)
