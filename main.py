@@ -6,10 +6,12 @@ def main_menu():
         print("1. View Periodic Table")
         print("2. 🔍 Search Element")
         print("3. Campare Elements")
-        print("4. 🧠 Quiz Challenge")
-        print("5. Highest Scores")
-        print("6. About")
-        print("7. 🚪 Exit")
+        print("4. Categories")
+        print("5. Discovery Timeline")
+        print("6. 🧠 Quiz Challenge")
+        print("7. Highest Scores")
+        print("8. About")
+        print("9. 🚪 Exit")
         print("="*45)
 
         choice = int(input("Enter your choice (1-7): ")) #taking input from user
@@ -30,10 +32,13 @@ def main_menu():
             print("\nQuiz feature coming soon.")
 
         elif choice == 5:
+                    print("\nHighest Scores feature coming soon.")
+
+        elif choice == 5:
             print("\nHighest Scores feature coming soon.")
 
         elif choice == 6:
-            print("\nHighest Scores feature coming soon.")
+            print("\nAbout feature coming soon.")
 
         elif choice == 7:
             print("\nThank you for using the project.")
@@ -184,6 +189,39 @@ def categories(elements):
 
     choice = int(input("Enter the choice (1-10): "))
 
+    if choice == 1:
+        category = "Alkali Metal"
+    elif choice == 2:
+        category = "Alkaline Earth Metal"
+    elif choice == 3:
+            category = "Transition Metal"
+    elif choice == 4:
+        category = "Post-transition Metal"
+    elif choice == 5:
+        category = "Metalloid"
+    elif choice == 6:
+        category = "Non-metal"
+    elif choice == 7:
+        category = "Halogen"
+    elif choice == 8:
+        category = "Noble Gas"
+    elif choice == 9:
+        category = "Lanthanide"
+    elif choice == 10:
+        category = "Actinide"
+    else:
+        print("Invalid choice.")
+        return
+
+    print("\nAtomic No.\tSymbol\tName")
+    print("-"*30)
+
     for atomic_number in elements:
+        if elements[atomic_number]["category"] == category:
+            print(
+                atomic_number,
+                elements[atomic_number]["symbol"],
+                elements[atomic_number]["name"]
+            )
 
 categories(elements)
