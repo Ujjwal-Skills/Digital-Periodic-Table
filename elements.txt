@@ -1,0 +1,118 @@
+1|Hydrogen|H|1.008|Non-metal|1|1|Gas|Henry Cavendish|1766|Hydrogen is the most abundant element in the universe.
+2|Helium|He|4.0026|Noble Gas|18|1|Gas|Pierre Janssen and Norman Lockyer|1868|Helium was discovered in the Sun before it was found on Earth.
+3|Lithium|Li|6.94|Alkali Metal|1|2|Solid|Johan August Arfwedson|1817|Lithium is widely used in rechargeable batteries.
+4|Beryllium|Be|9.0122|Alkaline Earth Metal|2|2|Solid|Louis Nicolas Vauquelin|1798|Beryllium is stronger than steel by weight.
+5|Boron|B|10.81|Metalloid|13|2|Solid|Joseph Louis Gay-Lussac and Louis Jacques Thénard|1808|Boron is used in heat-resistant glass and detergents.
+6|Carbon|C|12.011|Non-metal|14|2|Solid|Unknown (Known since ancient times)|Ancient|Diamond and graphite are both forms of carbon.
+7|Nitrogen|N|14.007|Non-metal|15|2|Gas|Daniel Rutherford|1772|Nitrogen makes up about 78 percent of Earth's atmosphere.
+8|Oxygen|O|15.999|Non-metal|16|2|Gas|Carl Wilhelm Scheele and Joseph Priestley|1774|Oxygen is essential for most life on Earth.
+9|Fluorine|F|18.998|Halogen|17|2|Gas|Henri Moissan|1886|Fluorine is the most reactive element.
+10|Neon|Ne|20.180|Noble Gas|18|2|Gas|William Ramsay and Morris Travers|1898|Neon signs glow with a bright red-orange light.
+11|Sodium|Na|22.990|Alkali Metal|1|3|Solid|Humphry Davy|1807|Sodium reacts violently with water.
+12|Magnesium|Mg|24.305|Alkaline Earth Metal|2|3|Solid|Humphry Davy|1808|Magnesium burns with a brilliant white flame.
+13|Aluminium|Al|26.982|Post-transition Metal|13|3|Solid|Hans Christian Ørsted|1825|Aluminium is the most abundant metal in Earth's crust.
+14|Silicon|Si|28.085|Metalloid|14|3|Solid|Jöns Jacob Berzelius|1824|Silicon is the foundation of modern computer chips.
+15|Phosphorus|P|30.974|Non-metal|15|3|Solid|Hennig Brand|1669|Phosphorus glows faintly in the dark.
+16|Sulfur|S|32.06|Non-metal|16|3|Solid|Unknown (Known since ancient times)|Ancient|Sulfur is used to make sulfuric acid.
+17|Chlorine|Cl|35.45|Halogen|17|3|Gas|Carl Wilhelm Scheele|1774|Chlorine is commonly used to disinfect drinking water.
+18|Argon|Ar|39.948|Noble Gas|18|3|Gas|Lord Rayleigh and William Ramsay|1894|Argon is the third most abundant gas in Earth's atmosphere.
+19|Potassium|K|39.098|Alkali Metal|1|4|Solid|Humphry Davy|1807|Potassium is essential for healthy nerve and muscle function.
+20|Calcium|Ca|40.078|Alkaline Earth Metal|2|4|Solid|Humphry Davy|1808|Calcium is the most abundant mineral in the human body.
+21|Scandium|Sc|44.956|Transition Metal|3|4|Solid|Lars Fredrik Nilson|1879|Scandium is used in lightweight aerospace alloys.
+22|Titanium|Ti|47.867|Transition Metal|4|4|Solid|William Gregor|1791|Titanium is as strong as steel but much lighter.
+23|Vanadium|V|50.942|Transition Metal|5|4|Solid|Andrés Manuel del Río|1801|Vanadium strengthens steel used in tools and bridges.
+24|Chromium|Cr|51.996|Transition Metal|6|4|Solid|Louis Nicolas Vauquelin|1797|Chromium gives stainless steel its corrosion resistance.
+25|Manganese|Mn|54.938|Transition Metal|7|4|Solid|Johan Gottlieb Gahn|1774|Manganese is essential in steel production.
+26|Iron|Fe|55.845|Transition Metal|8|4|Solid|Unknown (Known since ancient times)|Ancient|Iron is the main element in Earth's core.
+27|Cobalt|Co|58.933|Transition Metal|9|4|Solid|Georg Brandt|1735|Cobalt gives glass and ceramics their deep blue colour.
+28|Nickel|Ni|58.693|Transition Metal|10|4|Solid|Axel Fredrik Cronstedt|1751|Nickel is widely used in coins and rechargeable batteries.
+29|Copper|Cu|63.546|Transition Metal|11|4|Solid|Unknown (Known since ancient times)|Ancient|Copper is an excellent conductor of electricity.
+30|Zinc|Zn|65.38|Transition Metal|12|4|Solid|Andreas Marggraf|1746|Zinc is used to galvanize iron and prevent rusting.
+31|Gallium|Ga|69.723|Post-transition Metal|13|4|Solid|Paul-Émile Lecoq de Boisbaudran|1875|Gallium melts at about 30°C and can melt in your hand.
+32|Germanium|Ge|72.630|Metalloid|14|4|Solid|Clemens Winkler|1886|Germanium is used in semiconductors and fibre optics.
+33|Arsenic|As|74.922|Metalloid|15|4|Solid|Albertus Magnus|1250|Arsenic has been used in medicines as well as poisons.
+34|Selenium|Se|78.971|Non-metal|16|4|Solid|Jöns Jacob Berzelius|1817|Selenium is used in solar panels and photocopiers.
+35|Bromine|Br|79.904|Halogen|17|4|Liquid|Antoine Jérôme Balard|1826|Bromine is one of only two elements that are liquid at room temperature.
+36|Krypton|Kr|83.798|Noble Gas|18|4|Gas|William Ramsay and Morris Travers|1898|Krypton is used in high-performance lighting and lasers.
+37|Rubidium|Rb|85.468|Alkali Metal|1|5|Solid|Robert Bunsen and Gustav Kirchhoff|1861|Rubidium is so reactive that it can ignite in air.
+38|Strontium|Sr|87.62|Alkaline Earth Metal|2|5|Solid|Adair Crawford|1790|Strontium produces the bright red colour in fireworks.
+39|Yttrium|Y|88.906|Transition Metal|3|5|Solid|Johan Gadolin|1794|Yttrium is used in LEDs, lasers and superconductors.
+40|Zirconium|Zr|91.224|Transition Metal|4|5|Solid|Martin Heinrich Klaproth|1789|Zirconium is highly resistant to corrosion and is used in nuclear reactors.
+41|Niobium|Nb|92.906|Transition Metal|5|5|Solid|Charles Hatchett|1801|Niobium is used to strengthen steel in pipelines and skyscrapers.
+42|Molybdenum|Mo|95.95|Transition Metal|6|5|Solid|Carl Wilhelm Scheele|1778|Molybdenum helps steel withstand high temperatures.
+43|Technetium|Tc|98|Transition Metal|7|5|Solid|Emilio Segrè and Carlo Perrier|1937|Technetium was the first element produced artificially.
+44|Ruthenium|Ru|101.07|Transition Metal|8|5|Solid|Karl Ernst Claus|1844|Ruthenium improves the durability of electrical contacts.
+45|Rhodium|Rh|102.91|Transition Metal|9|5|Solid|William Hyde Wollaston|1803|Rhodium is used in catalytic converters to reduce pollution.
+46|Palladium|Pd|106.42|Transition Metal|10|5|Solid|William Hyde Wollaston|1803|Palladium absorbs large amounts of hydrogen gas.
+47|Silver|Ag|107.87|Transition Metal|11|5|Solid|Unknown (Known since ancient times)|Ancient|Silver has the highest electrical conductivity of any metal.
+48|Cadmium|Cd|112.41|Transition Metal|12|5|Solid|Friedrich Stromeyer|1817|Cadmium is used in rechargeable batteries and pigments.
+49|Indium|In|114.82|Post-transition Metal|13|5|Solid|Ferdinand Reich and Hieronymus Richter|1863|Indium is used in touchscreens and LCD displays.
+50|Tin|Sn|118.71|Post-transition Metal|14|5|Solid|Unknown (Known since ancient times)|Ancient|Tin is used to coat steel food cans.
+51|Antimony|Sb|121.76|Metalloid|15|5|Solid|Unknown (Known since ancient times)|Ancient|Antimony is used in flame-retardant materials.
+52|Tellurium|Te|127.60|Metalloid|16|5|Solid|Franz-Joseph Müller von Reichenstein|1782|Tellurium is used in solar panels and semiconductors.
+53|Iodine|I|126.90|Halogen|17|5|Solid|Bernard Courtois|1811|Iodine is essential for proper thyroid function.
+54|Xenon|Xe|131.29|Noble Gas|18|5|Gas|William Ramsay and Morris Travers|1898|Xenon is used in camera flashes and spacecraft ion engines.
+55|Cesium|Cs|132.91|Alkali Metal|1|6|Solid|Robert Bunsen and Gustav Kirchhoff|1860|Cesium atomic clocks are among the most accurate clocks ever made.
+56|Barium|Ba|137.33|Alkaline Earth Metal|2|6|Solid|Carl Wilhelm Scheele|1772|Barium compounds are used in X-ray imaging of the digestive system.
+57|Lanthanum|La|138.91|Lanthanide|3|6|Solid|Carl Gustaf Mosander|1839|Lanthanum is used in camera lenses and hybrid car batteries.
+58|Cerium|Ce|140.12|Lanthanide|3|6|Solid|Martin Heinrich Klaproth, Jöns Jacob Berzelius and Wilhelm Hisinger|1803|Cerium is the most abundant rare-earth element.
+59|Praseodymium|Pr|140.91|Lanthanide|3|6|Solid|Carl Auer von Welsbach|1885|Praseodymium gives glass and ceramics a yellow-green colour.
+60|Neodymium|Nd|144.24|Lanthanide|3|6|Solid|Carl Auer von Welsbach|1885|Neodymium magnets are among the strongest permanent magnets.
+61|Promethium|Pm|145|Lanthanide|3|6|Solid|Jacob A. Marinsky, Lawrence E. Glendenin and Charles D. Coryell|1945|Promethium is the only radioactive lanthanide with no stable isotopes.
+62|Samarium|Sm|150.36|Lanthanide|3|6|Solid|Paul-Émile Lecoq de Boisbaudran|1879|Samarium is used in powerful permanent magnets.
+63|Europium|Eu|151.96|Lanthanide|3|6|Solid|Eugène-Anatole Demarçay|1901|Europium produces the red colour in television and LED screens.
+64|Gadolinium|Gd|157.25|Lanthanide|3|6|Solid|Jean Charles Galissard de Marignac|1880|Gadolinium is used as a contrast agent in MRI scans.
+65|Terbium|Tb|158.93|Lanthanide|3|6|Solid|Carl Gustaf Mosander|1843|Terbium creates green phosphors in fluorescent lamps.
+66|Dysprosium|Dy|162.50|Lanthanide|3|6|Solid|Paul-Émile Lecoq de Boisbaudran|1886|Dysprosium is used in high-performance magnets.
+67|Holmium|Ho|164.93|Lanthanide|3|6|Solid|Marc Delafontaine and Jacques-Louis Soret|1878|Holmium has the highest magnetic strength of any element.
+68|Erbium|Er|167.26|Lanthanide|3|6|Solid|Carl Gustaf Mosander|1843|Erbium is used in fibre-optic communication systems.
+69|Thulium|Tm|168.93|Lanthanide|3|6|Solid|Per Teodor Cleve|1879|Thulium is the rarest naturally occurring lanthanide.
+70|Ytterbium|Yb|173.05|Lanthanide|3|6|Solid|Jean Charles Galissard de Marignac|1878|Ytterbium is used in fibre lasers and atomic clocks.
+71|Lutetium|Lu|174.97|Lanthanide|3|6|Solid|Georges Urbain|1907|Lutetium is the hardest and densest lanthanide.
+72|Hafnium|Hf|178.49|Transition Metal|4|6|Solid|Dirk Coster and George de Hevesy|1923|Hafnium is used in nuclear reactor control rods.
+73|Tantalum|Ta|180.95|Transition Metal|5|6|Solid|Anders Gustaf Ekeberg|1802|Tantalum is highly resistant to corrosion.
+74|Tungsten|W|183.84|Transition Metal|6|6|Solid|Juan José and Fausto Elhuyar|1783|Tungsten has the highest melting point of all pure metals.
+75|Rhenium|Re|186.21|Transition Metal|7|6|Solid|Walter Noddack, Ida Noddack and Otto Berg|1925|Rhenium is used in jet engine turbine blades.
+76|Osmium|Os|190.23|Transition Metal|8|6|Solid|Smithson Tennant|1803|Osmium is the densest naturally occurring element.
+77|Iridium|Ir|192.22|Transition Metal|9|6|Solid|Smithson Tennant|1803|Iridium is extremely resistant to corrosion.
+78|Platinum|Pt|195.08|Transition Metal|10|6|Solid|Antonio de Ulloa|1735|Platinum is widely used in jewellery and catalytic converters.
+79|Gold|Au|196.97|Transition Metal|11|6|Solid|Unknown (Known since ancient times)|Ancient|Gold does not tarnish and is highly valued for jewellery.
+80|Mercury|Hg|200.59|Transition Metal|12|6|Liquid|Unknown (Known since ancient times)|Ancient|Mercury is the only metal that is liquid at room temperature.
+81|Thallium|Tl|204.38|Post-transition Metal|13|6|Solid|William Crookes|1861|Thallium was once used in rat poison but is highly toxic.
+82|Lead|Pb|207.2|Post-transition Metal|14|6|Solid|Unknown (Known since ancient times)|Ancient|Lead is very dense and is used for radiation shielding.
+83|Bismuth|Bi|208.98|Post-transition Metal|15|6|Solid|Claude François Geoffroy|1753|Bismuth expands slightly when it solidifies.
+84|Polonium|Po|209|Post-transition Metal|16|6|Solid|Marie Curie and Pierre Curie|1898|Polonium was named after Marie Curie's homeland, Poland.
+85|Astatine|At|210|Halogen|17|6|Solid|Dale R. Corson, Kenneth Ross MacKenzie and Emilio Segrè|1940|Astatine is the rarest naturally occurring halogen.
+86|Radon|Rn|222|Noble Gas|18|6|Gas|Friedrich Ernst Dorn|1900|Radon is a radioactive gas that can accumulate in buildings.
+87|Francium|Fr|223|Alkali Metal|1|7|Solid|Marguerite Perey|1939|Francium is one of the rarest naturally occurring elements.
+88|Radium|Ra|226|Alkaline Earth Metal|2|7|Solid|Marie Curie and Pierre Curie|1898|Radium glows faintly because of its radioactivity.
+89|Actinium|Ac|227|Actinide|3|7|Solid|André-Louis Debierne|1899|Actinium is used as a source of neutrons in research.
+90|Thorium|Th|232.04|Actinide|3|7|Solid|Jöns Jacob Berzelius|1828|Thorium is being studied as a possible nuclear fuel.
+91|Protactinium|Pa|231.04|Actinide|3|7|Solid|Kasimir Fajans and Oswald Helmuth Göhring|1913|Protactinium is one of the rarest and most expensive natural elements.
+92|Uranium|U|238.03|Actinide|3|7|Solid|Martin Heinrich Klaproth|1789|Uranium is widely used as fuel in nuclear power plants.
+93|Neptunium|Np|237|Actinide|3|7|Solid|Edwin McMillan and Philip H. Abelson|1940|Neptunium was the first transuranium element discovered.
+94|Plutonium|Pu|244|Actinide|3|7|Solid|Glenn T. Seaborg, Edwin McMillan, Joseph W. Kennedy and Arthur Wahl|1940|Plutonium is used in nuclear reactors and spacecraft power systems.
+95|Americium|Am|243|Actinide|3|7|Solid|Glenn T. Seaborg and colleagues|1944|Americium is commonly used in household smoke detectors.
+96|Curium|Cm|247|Actinide|3|7|Solid|Glenn T. Seaborg, Ralph A. James and Albert Ghiorso|1944|Curium was named in honour of Marie and Pierre Curie.
+97|Berkelium|Bk|247|Actinide|3|7|Solid|Glenn T. Seaborg, Stanley G. Thompson and Albert Ghiorso|1949|Berkelium was named after Berkeley, California.
+98|Californium|Cf|251|Actinide|3|7|Solid|Stanley G. Thompson, Kenneth Street Jr., Albert Ghiorso and Glenn T. Seaborg|1950|Californium is used as a powerful neutron source.
+99|Einsteinium|Es|252|Actinide|3|7|Solid|Albert Ghiorso and colleagues|1952|Einsteinium was discovered in the debris of a hydrogen bomb test.
+100|Fermium|Fm|257|Actinide|3|7|Solid|Albert Ghiorso and colleagues|1952|Fermium was named after physicist Enrico Fermi.
+101|Mendelevium|Md|258|Actinide|3|7|Solid|Albert Ghiorso, Glenn T. Seaborg, Gregory Choppin, Bernard Harvey and Stanley G. Thompson|1955|Mendelevium was named after Dmitri Mendeleev, the creator of the periodic table.
+102|Nobelium|No|259|Actinide|3|7|Solid|Joint Institute for Nuclear Research|1966|Nobelium was named in honour of Alfred Nobel.
+103|Lawrencium|Lr|266|Actinide|3|7|Solid|Albert Ghiorso and colleagues|1961|Lawrencium was named after Ernest O. Lawrence, inventor of the cyclotron.
+104|Rutherfordium|Rf|267|Transition Metal|4|7|Solid|Joint Institute for Nuclear Research and Lawrence Berkeley Laboratory|1964|Rutherfordium was named after physicist Ernest Rutherford.
+105|Dubnium|Db|268|Transition Metal|5|7|Solid|Joint Institute for Nuclear Research|1968|Dubnium was named after Dubna, Russia.
+106|Seaborgium|Sg|269|Transition Metal|6|7|Solid|Lawrence Berkeley Laboratory|1974|Seaborgium is named after Nobel laureate Glenn T. Seaborg.
+107|Bohrium|Bh|270|Transition Metal|7|7|Solid|Gesellschaft für Schwerionenforschung (GSI)|1981|Bohrium was named after physicist Niels Bohr.
+108|Hassium|Hs|269|Transition Metal|8|7|Solid|Gesellschaft für Schwerionenforschung (GSI)|1984|Hassium was named after the German state of Hesse.
+109|Meitnerium|Mt|278|Transition Metal|9|7|Solid|Gesellschaft für Schwerionenforschung (GSI)|1982|Meitnerium honours physicist Lise Meitner.
+110|Darmstadtium|Ds|281|Transition Metal|10|7|Solid|Gesellschaft für Schwerionenforschung (GSI)|1994|Darmstadtium was named after Darmstadt, Germany.
+111|Roentgenium|Rg|282|Transition Metal|11|7|Solid|Gesellschaft für Schwerionenforschung (GSI)|1994|Roentgenium was named after Wilhelm Conrad Röntgen.
+112|Copernicium|Cn|285|Transition Metal|12|7|Solid|Gesellschaft für Schwerionenforschung (GSI)|1996|Copernicium was named after astronomer Nicolaus Copernicus.
+113|Nihonium|Nh|286|Post-transition Metal|13|7|Solid|RIKEN|2004|Nihonium is the first element discovered in Asia.
+114|Flerovium|Fl|289|Post-transition Metal|14|7|Solid|Joint Institute for Nuclear Research|1998|Flerovium was named after the Flerov Laboratory of Nuclear Reactions.
+115|Moscovium|Mc|290|Post-transition Metal|15|7|Solid|Joint Institute for Nuclear Research, Lawrence Livermore National Laboratory and Oak Ridge National Laboratory|2003|Moscovium was named after the Moscow region.
+116|Livermorium|Lv|293|Post-transition Metal|16|7|Solid|Joint Institute for Nuclear Research and Lawrence Livermore National Laboratory|2000|Livermorium was named after Lawrence Livermore National Laboratory.
+117|Tennessine|Ts|294|Halogen|17|7|Solid|Joint Institute for Nuclear Research, Oak Ridge National Laboratory, Vanderbilt University and Lawrence Livermore National Laboratory|2010|Tennessine was named after the U.S. state of Tennessee.
+118|Oganesson|Og|294|Noble Gas|18|7|Solid|Joint Institute for Nuclear Research and Lawrence Livermore National Laboratory|2002|Oganesson is named after physicist Yuri Oganessian.
